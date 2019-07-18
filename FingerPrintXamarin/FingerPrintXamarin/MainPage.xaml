@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="FingerPrintXamarin.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    Title="MY XAM BANK"
+    mc:Ignorable="d">
+
+    <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Never">
+        <StackLayout
+            x:Name="Content"
+            BackgroundColor="White"
+            IsVisible="False">
+            <Frame>
+                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                    <Image HorizontalOptions="Start" Source="bankbuilding" />
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="24"
+                        HorizontalOptions="Center"
+                        Text="XAM Bank"
+                        TextColor="White"
+                        VerticalOptions="Center" />
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                    <Image HorizontalOptions="Start" Source="bankcardsc" />
+                    <Label
+                        FontSize="24"
+                        HorizontalOptions="Center"
+                        Text="1245678908655433"
+                        TextColor="White"
+                        VerticalOptions="Center" />
+                </StackLayout>
+            </Frame>
+            <Grid ColumnSpacing="5" HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <pancake:PancakeView
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="5,0,0,0"
+                    BackgroundColor="#5C72AB"
+                    BorderIsDashed="true"
+                    CornerRadius="60,0,0,60"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <StackLayout
+                        HeightRequest="100"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center">
+                        <Image HorizontalOptions="Center" Source="amount" />
+                        <Label
+                            FontSize="24"
+                            HorizontalOptions="Center"
+                            Text="200,000 $"
+                            TextColor="White" />
+                    </StackLayout>
+                </pancake:PancakeView>
+                <pancake:PancakeView
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="0,0,5,0"
+                    BackgroundColor="#5C72AB"
+                    BorderIsDashed="true"
+                    CornerRadius="0,60,60,0"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <StackLayout
+                        HeightRequest="100"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center">
+                        <Image HorizontalOptions="Center" Source="deposit" />
+                        <Label
+                            FontSize="24"
+                            HorizontalOptions="Center"
+                            Text="130,000 $"
+                            TextColor="White" />
+                    </StackLayout>
+                </pancake:PancakeView>
+            </Grid>
+
+            <Frame>
+                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                    <Image HorizontalOptions="Start" Source="cardsecurityc" />
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="24"
+                        HorizontalOptions="Center"
+                        Text="3D Secure"
+                        TextColor="White"
+                        VerticalOptions="Center" />
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                    <Image
+                        Aspect="AspectFill"
+                        HorizontalOptions="Start"
+                        Source="payment.png" />
+                    <Label
+                        FontSize="24"
+                        HorizontalOptions="Center"
+                        Text="123,000 $"
+                        TextColor="White"
+                        VerticalOptions="Center" />
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                    <Image
+                        Aspect="AspectFill"
+                        HorizontalOptions="Start"
+                        Source="wallet.png" />
+                    <Label
+                        FontSize="24"
+                        HorizontalOptions="Center"
+                        Text="0,000 $"
+                        TextColor="White"
+                        VerticalOptions="Center" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
